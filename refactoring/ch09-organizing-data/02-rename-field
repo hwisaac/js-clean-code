@@ -1,0 +1,27 @@
+"필드 이름 바꾸기(Rename Field)"는 코드 리팩토링 기법 중 하나로, 클래스나 객체의 필드(또는 속성)의 이름을 변경하여 그 필드가 표현하는 바를 더 명확하게 만드는 방법을 의미합니다.
+
+이 기법은 코드의 가독성을 높이고, 이해를 돕는 데 도움이 됩니다. 이름이 명확하고 의미 있는 필드는 코드를 읽는 사람에게 그 필드가 무엇을 나타내는지, 어떻게 사용되는지 명확하게 전달해줍니다.
+
+예를 들어, 아래와 같은 코드가 있다고 가정해 봅시다.
+
+```js
+class Employee {
+    constructor(name, db) {
+        this.name = name;
+        this.db = db; // Date of Birth
+    }
+}
+```
+
+위의 코드에서 `'db'` 필드는 태어난 날짜(Date of Birth)를 나타내는데, 이는 필드의 이름만으로는 명확히 이해하기 어렵습니다. 이 경우 '필드 이름 바꾸기' 기법을 적용하여 `'db'`를 `'dateOfBirth'`로 바꾸면 다음과 같이 됩니다.
+
+```js
+class Employee {
+    constructor(name, dateOfBirth) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+    }
+}
+```
+
+이제 `'dateOfBirth'` 필드는 그 이름만으로도 태어난 날짜를 나타내는 것임을 명확하게 이해할 수 있습니다. 이런 식으로 필드의 이름을 바꾸는 것은 코드의 가독성을 높이고, 이해를 돕는 데 큰 도움이 됩니다.
